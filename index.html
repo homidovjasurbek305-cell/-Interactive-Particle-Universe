@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Particle Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="ui-container">
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Particles:</span>
+                <span class="stat-value" id="particleCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">FPS:</span>
+                <span class="stat-value" id="fps">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Energy:</span>
+                <span class="stat-value" id="energy">0</span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="pauseBtn" class="btn">⏸ Pause</button>
+            <button id="clearBtn" class="btn">🗑 Clear</button>
+            <button id="explodeBtn" class="btn">💥 Explode</button>
+        </div>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="attract">🌟 Attract</button>
+            <button class="mode-btn" data-mode="repel">⚡ Repel</button>
+            <button class="mode-btn" data-mode="orbit">🌀 Orbit</button>
+            <button class="mode-btn" data-mode="chaos">🔥 Chaos</button>
+        </div>
+        
+        <div class="slider-container">
+            <label>Gravity: <span id="gravityValue">1.0</span></label>
+            <input type="range" id="gravitySlider" min="0" max="3" step="0.1" value="1">
+        </div>
+        
+        <div class="slider-container">
+            <label>Speed: <span id="speedValue">1.0</span></label>
+            <input type="range" id="speedSlider" min="0.1" max="3" step="0.1" value="1">
+        </div>
+    </div>
+    
+    <div class="info-panel">
+        <h3>🎨 Interactive Particle Universe</h3>
+        <p><strong>Click anywhere</strong> to spawn particles</p>
+        <p><strong>Drag</strong> to create attraction forces</p>
+        <p><strong>Right-click</strong> to create repulsion</p>
+        <p>Switch modes to see different physics effects!</p>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
